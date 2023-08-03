@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Izmir';
+    src: url('./fonts/izmir/AhmetAltun-Izmir-Medium.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Izmir';
+    src: url('./fonts/izmir/AhmetAltun-Izmir-Semibold.otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Izmir';
+    src: url('./fonts/izmir/AhmetAltun-Izmir-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --primary: #5927FF;
+    --primary-darken-20: #2c00c0;
+    --primary-darken-40: #15005a;
+    --primary-light-hover: rgba(89, 39, 255, 0.06);
+    --primary-light-active: rgba(89, 39, 255, 0.12);
+    --focus-shadow: rgba(89, 39, 255, 0.15);
+    --background: white;
+    --hover-background: #F1F4F6;
+    --text-color-hight: #1c1c1c;
+    --input-actions-border: #5927FF;
+    --input-text-color: #1c1c1c;
+    --input-bg: #f1f4f6;
+    --input-bg-active: #FFFFFF;
+    --input-text-hover: #5927FF;
+    --toggle-input-bg: #DAE2E8;
+    --error: #F94C27;
+}
+
+select {
+    width: 416px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    height: 80px;
+    border-radius: 16px;
+    background-color: #f1f4f6;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 24px;
+    position: relative;
+
+    background-image:
+        linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position:
+        calc(100% - 32px) calc(1em + 14px),
+        calc(100% - 27px) calc(1em + 14px);
+    background-size:
+        5px 5px,
+        5px 5px;
+    background-repeat: no-repeat;
+}
+
+select:focus {
+    background-image:
+        linear-gradient(45deg, gray 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, gray 50%);
+    background-position:
+        calc(100% - 27px) 1.5em,
+        calc(100% - 32px) 1.5em;
+    background-size:
+        5px 5px,
+        5px 5px;
+    background-repeat: no-repeat;
+    outline: 0;
+
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 0 4px var(--focus-shadow);
+    background-color: #fff;
+}
+
+select::after {
+    position:absolute;
+   bottom:.16em;
+   top:.16em;
+   right:.6rem;
+   content:'\2194';
+   pointer-events:none;
+   color: red;
+}
