@@ -20,6 +20,18 @@ const rejectWithDelay = (value: any, ms: number = 1000) => {
     return delay(value, ms, "reject")
 }
 
+/*
+    Пример использования:
+    const api = useApi();
+
+    const response1 = await api.get('/endpoint_1')
+    const response2 = await api.get('/endpoint_2', {
+        param1: 'test',
+        param2: 1,
+        param3: ['a', 'b']
+    })
+*/
+
 export const useApi = () => {
     const get = (url: AvailableURLs, params: any = {}): Promise<any> => {
         switch (url) {
